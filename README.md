@@ -15,7 +15,7 @@ Need to :
 ---
 
 sqoop dependencies (add to sqoop/lib) :
-- my-sql-connector
+- mysql-connector-java
 - common-lang-2.6
 
 ---
