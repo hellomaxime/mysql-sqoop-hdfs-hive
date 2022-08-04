@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABSE: mysqldb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5
+    depends_on:
+      - db
+    ports:
+      - "3312:80"
